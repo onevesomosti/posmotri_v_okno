@@ -175,7 +175,7 @@ ol {
   position: relative; /*для позициониования прелоадера*/
 }
 
-/*спрятать скролл для Chromium и Webkit*/
+/*спрятать скролл для Chromium и Webkit */
 .content__list::-webkit-scrollbar {
   display: none;
 }
