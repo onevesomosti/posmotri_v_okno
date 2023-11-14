@@ -9,16 +9,16 @@ html {
 }
 
 .page {
-  inline-size: 1200px;
-  block-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 h1,
@@ -42,33 +42,34 @@ ol {
 
 .visually-hidden {
   position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
 }
 
 .content {
   display: flex;
-  padding: 133px 30px;
-  gap: 30px;
   align-items: flex-end;
+  gap: 30px;
+  padding: 133px 30px;
   min-inline-size: 1140px;
 }
 
 .result__video-container {
-  min-inline-size: 711px;
-  min-block-size: 386px;
-  margin-block-end: 16px;
   position: relative; /*для позициониования прелоадера*/
+  margin-block-end: 16px;
+  inline-size: 711px;
+  block-size: 386px;
 }
 
 .result__video {
-  inline-size: 100%;
   object-fit: cover;
   object-position: center;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .search-form {
@@ -84,9 +85,9 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-size: inherit;
-  font-weight: 400;
   margin-block-end: 5px;
+  font-weight: 400;
+  font-size: inherit;
 }
 
 .search-form__label {
@@ -110,11 +111,11 @@ ol {
   border: none;
   border-block-start: 1px solid currentColor;
   border-block-end: 1px solid currentColor;
-  background-color: transparent;
   color: #fff;
   font-family: inherit;
-  min-inline-size: 225px;
   font-size: inherit;
+  background-color: transparent;
+  min-inline-size: 225px;
   appearance: none;
 }
 
@@ -133,12 +134,12 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  border: 1px solid #fff;
-  inline-size: 19px;
-  block-size: 19px;
   display: flex; /*для позиционирования ::before*/
   justify-content: center;
   align-items: center;
+  border: 1px solid #fff;
+  inline-size: 19px;
+  block-size: 19px;
 }
 
 .search-form__checkbox:checked +
@@ -155,9 +156,9 @@ ol {
 
 .title {
   font-family: Oswald, sans-serif;
+  font-weight: 700;
   font-size: 75px;
   font-style: normal;
-  font-weight: 700;
   line-height: 94%;
   text-transform: uppercase;
 }
@@ -167,10 +168,11 @@ ol {
 }
 
 .content__list {
-  block-size: 298px;
-  overflow-y: auto;
-  margin-block-start: 26px;
   position: relative; /*для позициониования прелоадера*/
+  margin-block-start: 26px;
+  overflow-y: auto;
+  block-size: 298px;
+  min-inline-size: 404px;
 }
 
 /*ветикальные отступы между элементами, кроме последнего*/
@@ -182,8 +184,8 @@ ol {
   display: block;
   margin: 2px;
   padding: 2px;
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 .content__card-link:hover {
@@ -218,48 +220,48 @@ ol {
 }
 
 .content__video-card-title {
+  margin-block-end: 6px;
+  overflow: hidden;
   font-family: Oswald, sans-serif;
+  font-weight: 700;
   font-size: 30px;
   font-style: normal;
-  font-weight: 700;
   line-height: 100%;
   text-transform: uppercase;
-  margin-block-end: 6px;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
 }
 
 .content__video-card-description {
+  overflow: hidden;
   line-height: 90%;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow: hidden;
 }
 
 .content__video-card-thumbnail {
-  inline-size: 194px;
-  block-size: 103px;
   object-fit: cover;
   object-position: center;
+  inline-size: 194px;
+  block-size: 103px;
 }
 
 .button {
-  border: 1px solid currentColor;
-  margin: 2px;
-  background-color: transparent;
-  color: inherit;
-  text-align: center;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: 700;
-  min-block-size: 34px;
   align-self: flex-end;
+  margin: 2px;
+  border: 1px solid currentColor;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: inherit;
+  text-align: center;
+  background-color: transparent;
+  min-block-size: 34px;
 }
 
 .button:hover {
-  cursor: pointer;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .button:active {
