@@ -108,10 +108,10 @@ ol {
 
 .search-form__textfield {
   border: none;
-  border-block-start: 1px solid #fff;
-  border-block-end: 1px solid #fff;
+  border-block-start: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
   background-color: transparent;
-  color: #ffffffb2;
+  color: #fff;
   font-family: inherit;
   min-inline-size: 225px;
   font-size: inherit;
@@ -169,15 +169,8 @@ ol {
 .content__list {
   block-size: 298px;
   overflow-y: auto;
-  -ms-overflow-style: none; /*спрятать скролл для IE*/
-  scrollbar-width: none; /*спрятать скролл для FF*/
   margin-block-start: 26px;
   position: relative; /*для позициониования прелоадера*/
-}
-
-/*спрятать скролл для Chromium и Webkit*/
-.content__list::-webkit-scrollbar {
-  display: none;
 }
 
 /*ветикальные отступы между элементами, кроме последнего*/
@@ -221,6 +214,7 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1; /*чтобы занял всё пространство, не занятое картинкой*/
+  max-inline-size: 200px;
 }
 
 .content__video-card-title {
@@ -231,10 +225,16 @@ ol {
   line-height: 100%;
   text-transform: uppercase;
   margin-block-end: 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
   line-height: 90%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-thumbnail {
@@ -245,7 +245,7 @@ ol {
 }
 
 .button {
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   margin: 2px;
   background-color: transparent;
   color: inherit;
@@ -253,7 +253,7 @@ ol {
   font-family: inherit;
   font-size: inherit;
   font-weight: 700;
-  block-size: 34px;
+  min-block-size: 34px;
   align-self: flex-end;
 }
 
